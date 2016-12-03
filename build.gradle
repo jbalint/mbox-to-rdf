@@ -1,0 +1,39 @@
+buildscript {
+    ext.kotlin_version = '1.0.4'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+plugins {
+    id "com.github.johnrengelman.shadow" version "1.2.4"
+}
+
+version = '0.1'
+
+apply plugin: "kotlin"
+apply plugin: "idea"
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url "http://maven.stardog.com"
+    }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.apache.james:apache-mime4j-core:0.8.0"
+    compile "org.apache.james:apache-mime4j-dom:0.8.0"
+    compile "org.apache.james:apache-mime4j-storage:0.8.0"
+    compile "org.apache.james:apache-mime4j-mbox-iterator:0.8.0"
+    compile "com.google.guava:guava:18.0"
+    compileOnly "com.complexible.stardog:server:4.2"
+    //compile "mbox_tools:mbox_parser:1.0-jess"
+}
