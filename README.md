@@ -18,9 +18,12 @@ BITES:
 ```shell
 $ stardog doc put -r MboxExtractor mbox stardog_42_release.mbox
 Successfully put document in the document store: tag:stardog:api:docs:mbox:stardog_42_release.mbox
+```
 
+We can then search for all messages that contain the string "Release":
+
+```shell
 $ stardog query execute mbox 'select * { graph ?doc { ?message mbox:subject ?subj. FILTER(contains(?subj, "Released")) } }'
-stardog query execute mbox 'select * { graph ?doc { ?message mbox:subject ?subj. FILTER(contains(?subj, "Released")) } }'
 +---------------------------------------------------+----------------------------------------------------------------------------------+------------------------+
 |                        doc                        |                                     message                                      |          subj          |
 +---------------------------------------------------+----------------------------------------------------------------------------------+------------------------+
@@ -55,17 +58,17 @@ for an email message. The prefix `mbox` is defined as
 ### Classes
 
 | Class          | Description      |
-|----------------+------------------|
+| -------------- | ---------------- |
 | `mbox:Message` | An email message |
 
 ### Properties
 
-| Property          | Description                                                                                                              |
-|-------------------+--------------------------------------------------------------------------------------------------------------------------|
-| `mbox:references` | The given message references the pointed-to message                                                                      |
-| `mbox:inReplyTo`  | The given message is a reply to the pointed-to-message                                                                   |
-| `mbox:from`       | The given message was sent by the entity. The entity is a bnode with a `foaf:mbox` andoptionally a `foaf:name` property. |
-| `mbox:to`         | The given message was sent to the entity. The entity is a bnode with a `foaf:mbox` andoptionally a `foaf:name` property. |
-| `mbox:subject`    | The subject of the given message.                                                                                        |
-| `mbox:date`       | The date the given message was sent.                                                                                     |
-| `mbox:body`       | The body text of the given message.                                                                                      |
+| Property          | Description                                                                                                               |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `mbox:references` | The given message references the pointed-to message                                                                       |
+| `mbox:inReplyTo`  | The given message is a reply to the pointed-to-message                                                                    |
+| `mbox:from`       | The given message was sent by the entity. The entity is a bnode with a `foaf:mbox` and optionally a `foaf:name` property. |
+| `mbox:to`         | The given message was sent to the entity. The entity is a bnode with a `foaf:mbox` and optionally a `foaf:name` property. |
+| `mbox:subject`    | The subject of the given message.                                                                                         |
+| `mbox:date`       | The date the given message was sent.                                                                                      |
+| `mbox:body`       | The body text of the given message.                                                                                       |
