@@ -1,0 +1,45 @@
+# single-message test case expected output from running extractor on stardog_42_release.mbox
+@prefix mbox: <tag:stardog:api:mbox:> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<tag:stardog:api:mbox:CAKqS+r0pFk1YGqfZHgyDR5kbDnjGbP+HbiCZZ=8mp+C8af4YxA@mail.gmail.com>
+    a mbox:Message ;
+	mbox:subject "Stardog 4.2 Released" ;
+	mbox:date "2016-09-29T15:20:22.000-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	mbox:from [foaf:name "Michael Grove" ; foaf:mbox <mailto:mi...@stardog.com>] ;
+	mbox:to [ foaf:name "stardog" ; foaf:mbox <mailto:sta...@clarkparsia.com> ] ;
+	mbox:body """Folks,
+
+We're very happy to announce the release of Stardog 4.2!
+
+Stardog 4.2 rolls out a couple of new features: stored queries and
+Blob Indexing and Text Enrichment with Semantics: BITES.
+
+Stored queries [1] allows you to save queries and associate then with
+a name and then execute those queries later on using only their name.
+
+BITES [2] adds to Stardog a document storage subsystem unifying
+unstructured data like text documents or images with the graph. How
+data is extracted from unstructured content is completely configurable
+by the user. There's a simple example [3] online.
+
+This release also includes a variety of bug fixes, optimization and
+query evaluation improvements, and support for UNION in Stardog Rules.
+
+Finally, as of Stardog 4.2, we've decided to deprecate the SNARL
+protocol [4]. As of this release, HTTP is the default protocol;
+support for the SNARL protocol will be dropped in Stardog 5. Starting
+in Stardog 5, the Stardog server will support only HTTP(s) & HTTP2.
+
+For the full list of changes, please refer to the release notes [5].
+
+Cheers,
+
+The Stardog Team
+
+[1] http://docs.stardog.com/#_managing_stored_queries
+[2] http://docs.stardog.com/#_unstructured_data
+[3] https://github.com/stardog-union/stardog-examples/tree/develop/examples/docs
+[4] http://docs.stardog.com/#_snarl_protocol
+[5] http://docs.stardog.com/release-notes/
+""" .

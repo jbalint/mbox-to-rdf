@@ -1,8 +1,12 @@
 buildscript {
-    ext.kotlin_version = '1.0.4'
+    // https://blog.jetbrains.com/kotlin/2016/10/kotlin-1-1-m02-is-here/
+    ext.kotlin_version = '1.1-M03'
 
     repositories {
         mavenCentral()
+        maven {
+            url "http://dl.bintray.com/kotlin/kotlin-eap-1.1"
+        }
     }
 
     dependencies {
@@ -25,6 +29,9 @@ repositories {
     maven {
         url "http://maven.stardog.com"
     }
+    maven {
+        url "http://dl.bintray.com/kotlin/kotlin-eap-1.1"
+    }
 }
 
 dependencies {
@@ -35,5 +42,6 @@ dependencies {
     compile "org.apache.james:apache-mime4j-mbox-iterator:0.8.0"
     compile "com.google.guava:guava:18.0"
     compileOnly "com.complexible.stardog:server:4.2"
-    //compile "mbox_tools:mbox_parser:1.0-jess"
+    testCompile "com.complexible.stardog:server:4.2"
+    testCompile "junit:junit:4.12"
 }

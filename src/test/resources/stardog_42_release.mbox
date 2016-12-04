@@ -1,0 +1,75 @@
+X-Received: by 10.176.69.129 with SMTP id u1mr965216uau.43.1475180424217;
+        Thu, 29 Sep 2016 13:20:24 -0700 (PDT)
+X-BeenThere: stardog@clarkparsia.com
+Received: by 10.157.43.147 with SMTP id u19ls3978463ota.0.gmail; Thu, 29 Sep
+ 2016 13:20:23 -0700 (PDT)
+X-Received: by 10.176.1.100 with SMTP id 91mr2865960uak.30.1475180423277;
+        Thu, 29 Sep 2016 13:20:23 -0700 (PDT)
+Return-Path: <mi...@clarkparsia.com>
+Received: from mail-ua0-x22f.google.com (mail-ua0-x22f.google.com. [2607:f8b0:400c:c08::22f])
+        by mx.google.com with ESMTPS id w190si5037522vka.31.2016.09.29.13.20.23
+        for <sta...@clarkparsia.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 29 Sep 2016 13:20:23 -0700 (PDT)
+Received-SPF: neutral (google.com: 2607:f8b0:400c:c08::22f is neither permitted nor denied by best guess record for domain of mi...@clarkparsia.com) client-ip=2607:f8b0:400c:c08::22f;
+Authentication-Results: mx.google.com;
+       dkim=pass head...@stardog-com.20150623.gappssmtp.com;
+       spf=neutral (google.com: 2607:f8b0:400c:c08::22f is neither permitted nor denied by best guess record for domain of mi...@clarkparsia.com) smtp.mailfrom=mi...@clarkparsia.com
+Received: by mail-ua0-x22f.google.com with SMTP id l16so57747247uaa.1
+        for <sta...@clarkparsia.com>; Thu, 29 Sep 2016 13:20:23 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=stardog-com.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=yA+DTQ7H6c/RibaPG9sPbThtfTXYFDSvfk3Jr6fArVs=;
+        b=RvsywM9kbPKScdeEJP7OdLEk0B5IZRmTlVZObrRVrF9FuIJz44+EsWxNWx4U5XrJ7q
+         9OnMyR2EsgYksc0qrK+Ht5AD/8FhqVSBp0SLRVPcjrVtWAdkTrOz1CfkJudDsqj4pzsA
+         sqF49liIDzdBxlb+tajogsFrYLsWvOkQcTXxMd8eItKCiAvwQ/3RmEuPBmuj5zsjSkGA
+         /seXZ8wu5sKPgc7ic+dHdMpo2kjM5wfP3pjQL0L64cP2R4PMd7UuWBkljca9IidD3xIq
+         xxUZRXT+svzGd+Stb/QGz52/9w2bJfUn3Mysc1g1BFf8wGk6xh1ghk1g4rJ0B2w/71Yc
+         aZYQ==
+X-Gm-Message-State: AA6/9RmF4O4RM/JbxYJcBUOGCD9wa+ydaeG4+MrAf0RHFNSCMXwqpR+/MwTZ/2ezbIJpdJOqhr2Dpn8ISK7MOQ==
+X-Received: by 10.159.35.165 with SMTP id 34mr2761175uao.141.1475180422873;
+ Thu, 29 Sep 2016 13:20:22 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.31.227.65 with HTTP; Thu, 29 Sep 2016 13:20:22 -0700 (PDT)
+From: Michael Grove <mi...@stardog.com>
+Date: Thu, 29 Sep 2016 16:20:22 -0400
+Message-ID: <CAKqS+r0pFk1YGqfZHgyDR5kbDnjGbP+HbiCZZ=8mp+C8af4YxA@mail.gmail.com>
+Subject: Stardog 4.2 Released
+To: stardog <sta...@clarkparsia.com>
+Content-Type: text/plain; charset=UTF-8
+
+Folks,
+
+We're very happy to announce the release of Stardog 4.2!
+
+Stardog 4.2 rolls out a couple of new features: stored queries and
+Blob Indexing and Text Enrichment with Semantics: BITES.
+
+Stored queries [1] allows you to save queries and associate then with
+a name and then execute those queries later on using only their name.
+
+BITES [2] adds to Stardog a document storage subsystem unifying
+unstructured data like text documents or images with the graph. How
+data is extracted from unstructured content is completely configurable
+by the user. There's a simple example [3] online.
+
+This release also includes a variety of bug fixes, optimization and
+query evaluation improvements, and support for UNION in Stardog Rules.
+
+Finally, as of Stardog 4.2, we've decided to deprecate the SNARL
+protocol [4]. As of this release, HTTP is the default protocol;
+support for the SNARL protocol will be dropped in Stardog 5. Starting
+in Stardog 5, the Stardog server will support only HTTP(s) & HTTP2.
+
+For the full list of changes, please refer to the release notes [5].
+
+Cheers,
+
+The Stardog Team
+
+[1] http://docs.stardog.com/#_managing_stored_queries
+[2] http://docs.stardog.com/#_unstructured_data
+[3] https://github.com/stardog-union/stardog-examples/tree/develop/examples/docs
+[4] http://docs.stardog.com/#_snarl_protocol
+[5] http://docs.stardog.com/release-notes/

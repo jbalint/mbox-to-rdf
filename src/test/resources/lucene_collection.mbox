@@ -1,0 +1,224 @@
+From dev-return-266345-apmail-lucene-dev-archive=lucene.apache.org@lucene.apache.org  Thu Dec  1 00:17:45 2016
+Return-Path: <dev-return-266345-apmail-lucene-dev-archive=lucene.apache.org@lucene.apache.org>
+X-Original-To: apmail-lucene-dev-archive@www.apache.org
+Delivered-To: apmail-lucene-dev-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id AB43F1976F
+	for <apmail-lucene-dev-archive@www.apache.org>; Thu,  1 Dec 2016 00:17:45 +0000 (UTC)
+Received: (qmail 78625 invoked by uid 500); 1 Dec 2016 00:17:44 -0000
+Delivered-To: apmail-lucene-dev-archive@lucene.apache.org
+Received: (qmail 78568 invoked by uid 500); 1 Dec 2016 00:17:44 -0000
+Mailing-List: contact dev-help@lucene.apache.org; run by ezmlm
+Precedence: bulk
+List-Help: <mailto:dev-help@lucene.apache.org>
+List-Unsubscribe: <mailto:dev-unsubscribe@lucene.apache.org>
+List-Post: <mailto:dev@lucene.apache.org>
+List-Id: <dev.lucene.apache.org>
+Reply-To: dev@lucene.apache.org
+Delivered-To: mailing list dev@lucene.apache.org
+Received: (qmail 78556 invoked by uid 99); 1 Dec 2016 00:17:44 -0000
+Received: from pnap-us-west-generic-nat.apache.org (HELO spamd1-us-west.apache.org) (209.188.14.142)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 Dec 2016 00:17:44 +0000
+Received: from localhost (localhost [127.0.0.1])
+	by spamd1-us-west.apache.org (ASF Mail Server at spamd1-us-west.apache.org) with ESMTP id 7FAFBC1B68
+	for <dev@lucene.apache.org>; Thu,  1 Dec 2016 00:17:43 +0000 (UTC)
+X-Virus-Scanned: Debian amavisd-new at spamd1-us-west.apache.org
+X-Spam-Flag: NO
+X-Spam-Score: 2.001
+X-Spam-Level: **
+X-Spam-Status: No, score=2.001 tagged_above=-999 required=6.31
+	tests=[KAM_BADIPHTTP=2, SPF_PASS=-0.001, URIBL_BLOCKED=0.001,
+	WEIRD_PORT=0.001] autolearn=disabled
+Received: from mx1-lw-us.apache.org ([10.40.0.8])
+	by localhost (spamd1-us-west.apache.org [10.40.0.7]) (amavisd-new, port 10024)
+	with ESMTP id 5QlAP9CVKp5g for <dev@lucene.apache.org>;
+	Thu,  1 Dec 2016 00:17:35 +0000 (UTC)
+Received: from serv1.sd-datasolutions.de (serv1.sd-datasolutions.de [188.138.57.78])
+	by mx1-lw-us.apache.org (ASF Mail Server at mx1-lw-us.apache.org) with ESMTPS id 1F4655F589
+	for <dev@lucene.apache.org>; Thu,  1 Dec 2016 00:17:34 +0000 (UTC)
+Received: from serv1 (localhost.localdomain [127.0.0.1])
+	by serv1.sd-datasolutions.de (Postfix) with ESMTP id 7DDFC4C01B7;
+	Thu,  1 Dec 2016 00:17:33 +0000 (UTC)
+Date: Thu, 1 Dec 2016 00:16:05 +0000 (UTC)
+From: Policeman Jenkins Server <jenkins@thetaphi.de>
+To: sarowe@apache.org, cpoerschke@apache.org, dev@lucene.apache.org
+Message-ID: <1691501495.39.1480551453517.JavaMail.jenkins@serv1>
+Subject: [JENKINS-EA] Lucene-Solr-6.x-Linux (32bit/jdk-9-ea+140) - Build #
+ 2309 - Unstable!
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_38_820163862.1480551453454"
+X-Jenkins-Job: Lucene-Solr-6.x-Linux
+X-Jenkins-Result: UNSTABLE
+X-Priority: 5 (Low)
+
+------=_Part_38_820163862.1480551453454
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Build: https://jenkins.thetaphi.de/job/Lucene-Solr-6.x-Linux/2309/
+Java: 32bit/jdk-9-ea+140 -server -XX:+UseConcMarkSweepGC
+
+1 tests failed.
+FAILED:  org.apache.solr.cloud.ShardSplitTest.testSplitAfterFailedSplit
+
+Error Message:
+expected:<1> but was:<2>
+
+<clipped for MboxExtractorTest>
+
+------=_Part_38_820163862.1480551453454
+Content-Type: text/plain; charset=us-ascii
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: dev-unsubscribe@lucene.apache.org
+For additional commands, e-mail: dev-help@lucene.apache.org
+------=_Part_38_820163862.1480551453454--
+
+From dev-return-266346-apmail-lucene-dev-archive=lucene.apache.org@lucene.apache.org  Thu Dec  1 00:34:02 2016
+Return-Path: <dev-return-266346-apmail-lucene-dev-archive=lucene.apache.org@lucene.apache.org>
+X-Original-To: apmail-lucene-dev-archive@www.apache.org
+Delivered-To: apmail-lucene-dev-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 8D63E19855
+	for <apmail-lucene-dev-archive@www.apache.org>; Thu,  1 Dec 2016 00:34:02 +0000 (UTC)
+Received: (qmail 16889 invoked by uid 500); 1 Dec 2016 00:33:59 -0000
+Delivered-To: apmail-lucene-dev-archive@lucene.apache.org
+Received: (qmail 16827 invoked by uid 500); 1 Dec 2016 00:33:59 -0000
+Mailing-List: contact dev-help@lucene.apache.org; run by ezmlm
+Precedence: bulk
+List-Help: <mailto:dev-help@lucene.apache.org>
+List-Unsubscribe: <mailto:dev-unsubscribe@lucene.apache.org>
+List-Post: <mailto:dev@lucene.apache.org>
+List-Id: <dev.lucene.apache.org>
+Reply-To: dev@lucene.apache.org
+Delivered-To: mailing list dev@lucene.apache.org
+Received: (qmail 16758 invoked by uid 99); 1 Dec 2016 00:33:58 -0000
+Received: from arcas.apache.org (HELO arcas) (140.211.11.28)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 Dec 2016 00:33:58 +0000
+Received: from arcas.apache.org (localhost [127.0.0.1])
+	by arcas (Postfix) with ESMTP id 7BBEC2C1F54
+	for <dev@lucene.apache.org>; Thu,  1 Dec 2016 00:33:58 +0000 (UTC)
+Date: Thu, 1 Dec 2016 00:33:58 +0000 (UTC)
+From: "Judith Silverman (JIRA)" <jira@apache.org>
+To: dev@lucene.apache.org
+Message-ID: <JIRA.12723736.1403726835000.407568.1480552438503@Atlassian.JIRA>
+In-Reply-To: <JIRA.12723736.1403726835000@Atlassian.JIRA>
+References: <JIRA.12723736.1403726835000@Atlassian.JIRA> <JIRA.12723736.1403726835061@arcas>
+Subject: [jira] [Comment Edited] (SOLR-6203) cast exception while searching
+ with sort function and result grouping
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+X-JIRA-FingerPrint: 30527f35849b9dde25b450d4833f0394
+
+
+    [ https://issues.apache.org/jira/browse/SOLR-6203?page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel&focusedCommentId=15709543#comment-15709543 ] 
+
+Judith Silverman edited comment on SOLR-6203 at 12/1/16 12:33 AM:
+------------------------------------------------------------------
+
+Thanks for the update, Christine.  I am happy to pursue your incremental approach.  I have made a patch to your branch in which I uncommented a couple of your signature changes and modified calls to the affected methods to use the new signatures.  I also took this opportunity to  start standardizing field and method names related to the field variously known throughout the codebase as "sortWithinGroup" and "withinGroupSort".  The latter fits better with related field and method names, and since we are already deprecating GroupingSpecification's accessors for Sorts in favor of accessors of  SortSpecs, this seems to me like a good time to make the change.  I renamed the new public accessors and also renamed private fields in all the files I was already modifying for this commit.  If you approve of this change, I will rename private fields in other files.  In the meantime, I will keep going in the direction you indicated.                           
+Thanks,        
+Judith 
+
+<clipped for MboxExtractorTest>
+
+--
+This message was sent by Atlassian JIRA
+(v6.3.4#6332)
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: dev-unsubscribe@lucene.apache.org
+For additional commands, e-mail: dev-help@lucene.apache.org
+
+
+From dev-return-266347-apmail-lucene-dev-archive=lucene.apache.org@lucene.apache.org  Thu Dec  1 00:47:00 2016
+Return-Path: <dev-return-266347-apmail-lucene-dev-archive=lucene.apache.org@lucene.apache.org>
+X-Original-To: apmail-lucene-dev-archive@www.apache.org
+Delivered-To: apmail-lucene-dev-archive@www.apache.org
+Received: from mail.apache.org (hermes.apache.org [140.211.11.3])
+	by minotaur.apache.org (Postfix) with SMTP id 5D0D4198AA
+	for <apmail-lucene-dev-archive@www.apache.org>; Thu,  1 Dec 2016 00:47:00 +0000 (UTC)
+Received: (qmail 40644 invoked by uid 500); 1 Dec 2016 00:46:59 -0000
+Delivered-To: apmail-lucene-dev-archive@lucene.apache.org
+Received: (qmail 40590 invoked by uid 500); 1 Dec 2016 00:46:59 -0000
+Mailing-List: contact dev-help@lucene.apache.org; run by ezmlm
+Precedence: bulk
+List-Help: <mailto:dev-help@lucene.apache.org>
+List-Unsubscribe: <mailto:dev-unsubscribe@lucene.apache.org>
+List-Post: <mailto:dev@lucene.apache.org>
+List-Id: <dev.lucene.apache.org>
+Reply-To: dev@lucene.apache.org
+Delivered-To: mailing list dev@lucene.apache.org
+Received: (qmail 40578 invoked by uid 99); 1 Dec 2016 00:46:58 -0000
+Received: from pnap-us-west-generic-nat.apache.org (HELO spamd2-us-west.apache.org) (209.188.14.142)
+    by apache.org (qpsmtpd/0.29) with ESMTP; Thu, 01 Dec 2016 00:46:58 +0000
+Received: from localhost (localhost [127.0.0.1])
+	by spamd2-us-west.apache.org (ASF Mail Server at spamd2-us-west.apache.org) with ESMTP id 68D031A9AF2
+	for <dev@lucene.apache.org>; Thu,  1 Dec 2016 00:46:58 +0000 (UTC)
+X-Virus-Scanned: Debian amavisd-new at spamd2-us-west.apache.org
+X-Spam-Flag: NO
+X-Spam-Score: 2.001
+X-Spam-Level: **
+X-Spam-Status: No, score=2.001 tagged_above=-999 required=6.31
+	tests=[KAM_BADIPHTTP=2, SPF_PASS=-0.001, URIBL_BLOCKED=0.001,
+	WEIRD_PORT=0.001] autolearn=disabled
+Received: from mx1-lw-eu.apache.org ([10.40.0.8])
+	by localhost (spamd2-us-west.apache.org [10.40.0.9]) (amavisd-new, port 10024)
+	with ESMTP id U9LXQbn8TQ7W for <dev@lucene.apache.org>;
+	Thu,  1 Dec 2016 00:46:43 +0000 (UTC)
+Received: from serv1.sd-datasolutions.de (serv1.sd-datasolutions.de [188.138.57.78])
+	by mx1-lw-eu.apache.org (ASF Mail Server at mx1-lw-eu.apache.org) with ESMTPS id C7EC25F47D
+	for <dev@lucene.apache.org>; Thu,  1 Dec 2016 00:46:42 +0000 (UTC)
+Received: from serv1 (localhost.localdomain [127.0.0.1])
+	by serv1.sd-datasolutions.de (Postfix) with ESMTP id 724DD4C07F6;
+	Thu,  1 Dec 2016 00:46:42 +0000 (UTC)
+Date: Thu, 1 Dec 2016 00:44:23 +0000 (UTC)
+From: Policeman Jenkins Server <jenkins@thetaphi.de>
+To: noble@apache.org, sarowe@apache.org, ichattopadhyaya@gmail.com, 
+	dev@lucene.apache.org
+Message-ID: <1894516031.41.1480553202470.JavaMail.jenkins@serv1>
+In-Reply-To: <2043795694.35.1480516596487.JavaMail.jenkins@serv1>
+References: <2043795694.35.1480516596487.JavaMail.jenkins@serv1>
+Subject: [JENKINS] Lucene-Solr-master-Solaris (64bit/jdk1.8.0) - Build # 982
+ - Still Unstable!
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_40_635214929.1480553202409"
+X-Jenkins-Job: Lucene-Solr-master-Solaris
+X-Jenkins-Result: UNSTABLE
+
+------=_Part_40_635214929.1480553202409
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Build: https://jenkins.thetaphi.de/job/Lucene-Solr-master-Solaris/982/
+Java: 64bit/jdk1.8.0 -XX:+UseCompressedOops -XX:+UseSerialGC
+
+1 tests failed.
+FAILED:  junit.framework.TestSuite.org.apache.solr.search.stats.TestDistrib=
+IDF
+
+Error Message:
+1 thread leaked from SUITE scope at org.apache.solr.search.stats.TestDistri=
+bIDF:     1) Thread[id=3D54257, name=3DOverseerHdfsCoreFailoverThread-97029=
+437477158917-127.0.0.1:44203_solr-n_0000000002, state=3DTIMED_WAITING, grou=
+p=3DOverseer Hdfs SolrCore Failover Thread.]         at java.lang.Thread.sl=
+eep(Native Method)         at org.apache.solr.cloud.OverseerAutoReplicaFail=
+overThread.run(OverseerAutoReplicaFailoverThread.java:137)         at java.=
+lang.Thread.run(Thread.java:745)
+
+<clipped for MboxExtractorTest>
+
+
+------=_Part_40_635214929.1480553202409
+Content-Type: text/plain; charset=us-ascii
+
+
+---------------------------------------------------------------------
+To unsubscribe, e-mail: dev-unsubscribe@lucene.apache.org
+For additional commands, e-mail: dev-help@lucene.apache.org
+------=_Part_40_635214929.1480553202409--
+
