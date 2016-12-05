@@ -65,8 +65,8 @@ for an email message. The prefix `mbox` is defined as
 
 | Property          | Description                                                                                                               |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `mbox:references` | The given message references the pointed-to message                                                                       |
-| `mbox:inReplyTo`  | The given message is a reply to the pointed-to-message                                                                    |
+| `mbox:references` | Points to one or more messages referenced by this message.                                                                |
+| `mbox:inReplyTo`  | Points a message that this message is a reply to.                                                                         |
 | `mbox:from`       | The given message was sent by the entity. The entity is a bnode with a `foaf:mbox` and optionally a `foaf:name` property. |
 | `mbox:to`         | The given message was sent to the entity. The entity is a bnode with a `foaf:mbox` and optionally a `foaf:name` property. |
 | `mbox:subject`    | The subject of the given message.                                                                                         |
